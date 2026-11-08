@@ -35,7 +35,8 @@ def build() -> dict:
         raise ValueError("Version must be numeric major.minor.patch")
     plugin = ROOT / "plugins" / NAME
     # Explicit source list: never copy project boards, logs, or machine-local state.
-    copies = {ROOT / "plugin.json": plugin / "plugin.json"}
+    copies = {ROOT / "plugin.json": plugin / "plugin.json",
+              ROOT / "LICENSE": plugin / "LICENSE"}
     for rel in ("logo.png", "logo.svg"):
         copies[ROOT / "assets" / rel] = plugin / "assets" / rel
     for rel in SKILL_FILES:
@@ -57,7 +58,7 @@ def build() -> dict:
             "category": "Creativity",
         }],
     })
-    files = list(copies.values()) + [marketplace, ROOT / "README.md", ROOT / "install-plugin.ps1"]
+    files = list(copies.values()) + [marketplace, ROOT / "README.md", ROOT / "install-plugin.ps1", ROOT / "LICENSE"]
     dist = ROOT / "dist"
     dist.mkdir(exist_ok=True)
     archive = dist / f"{NAME}-plugin-{version}.zip"

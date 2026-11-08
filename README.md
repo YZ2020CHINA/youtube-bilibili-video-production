@@ -1,5 +1,7 @@
 # YouTube+B站视频制作 · Codex 插件
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 将 `youtube-bilibili-video-production` skill 打包为 Codex 本地插件，版本 `1.2.1`。
 
 采用七阶段确认制：脚本与需求确认 → 素材搜集确认 → 故事板确认 → 可编辑粗剪 → 视频细节确认 → 修改复核 → 成片与交付。步骤 1 和步骤 3 接入 `atuntun-xhs-cover`，逐项确认封面风格、主体参考、标题、构图和三种平台画板；每阶段停在确认门，最后询问保存目录或是否打开现有文件位置。插件附带无第三方依赖的 `workflow_state.py`，用于记录阶段确认、修订和交付物。`atuntun-xhs-cover` 需要单独安装；不可用时会明确说明并按同一顺序收集封面信息，不会虚称已调用。
@@ -49,6 +51,7 @@ codex plugin list --marketplace youtube-bilibili-local --json
 .agents/plugins/marketplace.json
 plugins/youtube-bilibili-video-production/
   plugin.json
+  LICENSE
   assets/logo.png
   assets/logo.svg
   skills/youtube-bilibili-video-production/
@@ -62,10 +65,17 @@ plugins/youtube-bilibili-video-production/
     scripts/workflow_state.py
 install-plugin.ps1
 README.md
+LICENSE
 ```
 
 分发包不包含项目积木运行程序、画布数据、日志、缓存或绝对机器路径。插件没有账户认证或 API 密钥配置；后续实际使用的制作工具可能有各自要求。
 
 ## 重新打包（源项目）
 
-在源项目执行 `python scripts/build_plugin.py`，会将原 skill 文件同步到插件目录，并在 `dist/` 生成 ZIP 与 `.zip.sha256`。构建只使用 Python 标准库；安装现成 ZIP 无需 Python。当前版本为 `1.2.1`，分发包包含 14 个白名单文件，不包含项目积木、视频工程、缓存或本机绝对路径。
+在源项目执行 `python scripts/build_plugin.py`，会将原 skill 文件同步到插件目录，并在 `dist/` 生成 ZIP 与 `.zip.sha256`。构建只使用 Python 标准库；安装现成 ZIP 无需 Python。当前版本为 `1.2.1`，分发包包含 16 个白名单文件，不包含项目积木、视频工程、缓存或本机绝对路径。
+
+## 开源协议
+
+本插件的代码与随附文档采用 [MIT License](LICENSE)，版权所有 © 2026 YZ2020CHINA。允许使用、修改、分发和商业使用，分发时须保留版权声明与许可证全文。
+
+使用本插件时另行获取的视频、音乐、字体等第三方素材，以及单独安装的工具和 skill，遵循各自的许可证。
