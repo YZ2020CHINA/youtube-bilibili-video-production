@@ -6,7 +6,9 @@
 
 ## 视频说明
 
-[观看《YouTube+B站视频制作 Codex 插件｜3分钟讲解》](https://youtu.be/Bdf3F31kUPw)
+[![YouTube+B站视频制作 Codex 插件｜3分钟讲解 — 点击观看](https://img.youtube.com/vi/Bdf3F31kUPw/hqdefault.jpg)](https://www.youtube.com/watch?v=Bdf3F31kUPw)
+
+▶ **[点击封面或此处观看视频](https://www.youtube.com/watch?v=Bdf3F31kUPw)**（GitHub README 不支持 YouTube 内嵌播放器，点击后在 YouTube 播放。）
 
 通过视频了解插件的七阶段制作流程，以及从脚本、素材和故事板确认到粗剪、修改与最终交付的使用方式。
 
