@@ -1,0 +1,20 @@
+{
+  "name": "youtube-bilibili-local",
+  "interface": {
+    "displayName": "YouTube+B站视频制作 · 本地插件"
+  },
+  "plugins": [
+    {
+      "name": "youtube-bilibili-video-production",
+      "source": {
+        "source": "local",
+        "path": "./plugins/youtube-bilibili-video-production"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Creativity"
+    }
+  ]
+}

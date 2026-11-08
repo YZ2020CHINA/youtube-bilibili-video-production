@@ -1,0 +1,26 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "youtube-bilibili-video-production",
+  "version": "1.2.1",
+  "description": "分七个确认阶段完成 YouTube 与 B站视频，并在脚本和故事板阶段用阿囤囤 skill 确认更有表现力的封面。",
+  "author": {"name": "YZ2020CHINA"},
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "YouTube+B站视频制作",
+        "shortDescription": "七阶段确认式视频与创意封面流程",
+        "longDescription": "先详细询问需求、脚本和阿囤囤封面方向，再搜集并确认素材，制作并确认故事板与 3:4 封面提示词，改编三种平台画板，生成可编辑粗剪，经过两轮细节确认后才导出成片。包含素材许可、双语 SRT、简介、片尾署名、状态记录 helper 和最终保存位置询问。HyperFrames、FilmCraft、PhotoCraft 及 atuntun-xhs-cover 需单独安装；插件不会自动上传或发布视频。",
+        "developerName": "YZ2020CHINA",
+        "category": "Creativity",
+        "capabilities": ["Read", "Write"],
+        "brandColor": "#E63946",
+        "logo": "./assets/logo.png",
+        "composerIcon": "./assets/logo.png",
+        "defaultPrompt": [
+          "使用 $youtube-bilibili-video-production，从步骤1开始，先详细询问并确认脚本和阿囤囤封面需求。",
+          "按七个确认阶段制作 YouTube 与 Bilibili 视频，在步骤3确认故事板、封面提示词和三种画板。"
+        ]
+      }
+    }
+  }
+}

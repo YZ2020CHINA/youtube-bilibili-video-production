@@ -1,0 +1,7 @@
+interface:
+  display_name: "YouTube+B站视频制作"
+  short_description: "从剧本到双平台成片的完整工作流"
+  brand_color: "#E63946"
+  default_prompt: "使用 $youtube-bilibili-video-production 根据我的主题规划并完成 YouTube 与 Bilibili 视频制作流程。"
+policy:
+  allow_implicit_invocation: true

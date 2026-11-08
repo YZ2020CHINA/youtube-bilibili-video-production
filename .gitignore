@@ -1,0 +1,9 @@
+dist/
+.validation/
+__pycache__/
+*.pyc
+
+# Local production projects and machine-specific workspace state
+videos/
+project-blocks/
+project-plan.json
