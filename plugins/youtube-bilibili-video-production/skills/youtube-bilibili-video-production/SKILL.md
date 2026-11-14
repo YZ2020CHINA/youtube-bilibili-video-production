@@ -31,7 +31,7 @@ metadata:
 
 ### 4. 根据确认结果生成可编辑剪辑文件
 
-只有故事板、封面方案和素材脚本全部确认后，才调用 HyperFrames、FilmCraft、PhotoCraft 或其他已连接工具。先生成可编辑的工程和粗剪：独立视频、旁白、BGM、音效、字幕和片尾署名轨道；保留媒体路径、版本号和项目清单。此阶段不得替用户发布，也不得把粗剪标记为最终成片。打开剪辑工程或可播放预览，明确说“当前停在步骤 4，等待查看粗剪”。
+只有故事板、封面方案和素材脚本全部确认后，才调用 Remotion、FilmCraft、PhotoCraft 或其他已连接工具。先生成可编辑的工程和粗剪：独立视频、旁白、BGM、音效、字幕和片尾署名轨道；保留媒体路径、版本号和项目清单。Remotion 动效保留 React/TypeScript 源码、依赖锁文件、素材与 composition 参数，并先打开 Studio 预览；具体交接见 [references/remotion-workflow.md](references/remotion-workflow.md)。此阶段不得替用户发布，也不得把粗剪标记为最终成片。打开剪辑工程或可播放预览，明确说“当前停在步骤 4，等待查看粗剪”。
 
 ### 5. 粗剪查看与视频细节确认
 
@@ -62,14 +62,14 @@ metadata:
 
 ## 工具执行边界
 
-HyperFrames、FilmCraft、PhotoCraft、配音、字幕和简介属于阶段 4–7 的执行工具。它们不能绕过阶段 1–3 的确认门：在没有已记录的脚本、素材清单和故事板确认时，不调用渲染、批量下载、配音或最终导出。阶段 4 先产出可编辑粗剪；阶段 5–6 负责观看、修改和复核；阶段 7 才生成无字幕母版、双平台视频、三个封面、两个 SRT、工程文件、简介和登记表。
+Remotion、FilmCraft、PhotoCraft、配音、字幕和简介属于阶段 4–7 的执行工具。它们不能绕过阶段 1–3 的确认门：在没有已记录的脚本、素材清单和故事板确认时，不调用渲染、批量下载、配音或最终导出。阶段 4 先产出可编辑粗剪；阶段 5–6 负责观看、修改和复核；阶段 7 才生成无字幕母版、双平台视频、三个封面、两个 SRT、工程文件、简介和登记表。
 
 完整的工具分工、文件结构和验收清单见 [references/production-workflow.md](references/production-workflow.md)。封面 skill 的调用边界和三种画板改编规则见 [references/cover-workflow.md](references/cover-workflow.md)。阶段状态字段和确认记录格式见 [references/production-state.md](references/production-state.md)。
 
 ## 工具分工
 
 - **Codex**：选题、脚本、素材检索与许可核对、字幕和简介文案、各工具的操作编排。
-- **HyperFrames**：HTML/CSS/GSAP 动效、动态字幕、片头片尾、图表和 AI 补充镜头。
+- **Remotion**：用 React/TypeScript 制作按帧驱动的片头片尾、动态图形、动态字幕和图表；通过 Studio 预览，确认后将所需动效片段渲染交给 FilmCraft。它不直接生成 AI 视频素材。
 - **FilmCraft**：主时间线、自己的视频素材、剪辑、混音、转场、最终视频导出。
 - **PhotoCraft**：可修改的分层封面工程和 PNG/JPG 导出。
 

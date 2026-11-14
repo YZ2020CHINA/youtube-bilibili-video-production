@@ -14,6 +14,7 @@ SKILL_FILES = (
     "SKILL.md", "agents/openai.yaml",
     "references/assets-and-licensing.md",
     "references/production-workflow.md",
+    "references/remotion-workflow.md",
     "references/production-state.md",
     "references/cover-workflow.md",
     "references/descriptions-and-credits.md",

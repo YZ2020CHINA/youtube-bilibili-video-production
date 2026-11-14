@@ -7,7 +7,7 @@
 | 1. 剧本、脚本确认 | 需求问卷、选题卡、逐句脚本、假设清单；调用阿囤囤 skill 逐项收集封面方向 | `script/brief.md`、`script/script.csv`、`cover/brief.md` 或等价文件、待决定问题 | 用户明确确认脚本/需求和封面需求，或给出修改意见后再次确认 |
 | 2. 素材确认 | 候选检索、许可证核对、授权下载、分类整理 | 素材目录、候选比较、`licenses/asset-log.csv`、来源页面 | 用户明确确认素材清单；待确认素材不能进入正式制作 |
 | 3. 故事板确认 | 逐镜头故事板、静音 animatic、镜头与声音锚点；用阿囤囤 skill 生成并确认 3:4 封面提示词，再改编三种平台画板 | 故事板图/HTML、时间码表、封面提示词、三种画板构图、可编辑源文件 | 用户明确确认故事板、封面提示词/构图和镜头顺序 |
-| 4. 可编辑粗剪 | 建立多轨工程、导入确认素材、配音、BGM、字幕、片尾 | `.fcproj`、粗剪预览、独立轨道和媒体清单 | 用户看过粗剪并提交修改清单或确认进入细节修改 |
+| 4. 可编辑粗剪 | 建立多轨工程、导入确认素材、配音、BGM、字幕、片尾；建立 Remotion 动效与 Studio 预览 | `.fcproj`、Remotion 源工程、粗剪预览、独立轨道和媒体清单 | 用户看过粗剪并提交修改清单或确认进入细节修改 |
 | 5. 细节确认 | 打开粗剪并收集修改意见 | 首/中/末段索引、问题清单、时间码 | 用户确认修改范围或确认无需修改 |
 | 6. 修改复核 | 按清单改工程并重新预览 | 修订前后对照、变更清单、最新预览 | 用户明确确认最终剪辑 |
 | 7. 成片交付 | 导出、字幕、封面、简介、署名、验收记录 | 最终文件包、`verification.json`、交付说明 | 验收完成后询问保存目录和是否打开现有位置 |
@@ -38,7 +38,7 @@
 
 ## 剪辑
 
-FilmCraft 负责 A-roll/B-roll、配音、音乐、音量、转场、字幕、片尾署名和最终 MP4。HyperFrames 负责片头片尾、动态图形、动态字幕、图表和补充片段。先锁定内容与声音，再做包装。
+FilmCraft 负责 A-roll/B-roll、配音、音乐、音量、转场、字幕、片尾署名和最终 MP4。Remotion 负责 React/TypeScript 片头片尾、动态图形、动态字幕和图表，先用 Studio 查看按帧驱动的动效，再把已确认且获准渲染的片段交给 FilmCraft。先锁定内容与声音，再做包装。Remotion 的工程、预览、片段渲染和媒体交接要求见 [remotion-workflow.md](remotion-workflow.md)。
 
 ## 署名
 
@@ -60,6 +60,11 @@ covers/cover-bilibili-4x3.png
 subtitles/video.zh-CN.srt
 subtitles/video.en-US.srt
 projects/filmcraft/*.fcproj
+projects/remotion/package.json
+projects/remotion/<依赖锁文件>
+projects/remotion/src/
+projects/remotion/public/
+projects/remotion/render-manifest.json
 projects/photocraft/*.pcraft
 licenses/asset-log.csv
 ```

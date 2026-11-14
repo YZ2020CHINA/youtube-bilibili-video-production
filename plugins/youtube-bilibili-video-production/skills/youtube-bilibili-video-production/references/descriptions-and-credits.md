@@ -14,7 +14,7 @@
 
 【工具与流程】
 脚本：Codex
-动效：HyperFrames
+动效：Remotion
 剪辑：FilmCraft
 封面：PhotoCraft
 
@@ -44,7 +44,7 @@
 
 【制作工具】
 脚本与整理：Codex
-动效：HyperFrames
+动效：Remotion
 剪辑：FilmCraft
 封面工程：PhotoCraft
 
